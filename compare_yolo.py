@@ -1,3 +1,4 @@
+import torch
 from itertools import product
 from ultralytics import YOLO
 import csv
@@ -12,6 +13,11 @@ from pathlib import Path
 
 # Project paths
 BASE = Path(__file__).resolve().parent
+
+# Automatically select GPU if available
+DEVICE = 0 if torch.cuda.is_available() else "cpu"
+
+print(f"Using device: {DEVICE}")
 # Find all JPG images in the input directory
 IMAGES = sorted((BASE / "data/images").glob("*.jpg"))
 
@@ -32,7 +38,7 @@ for image, (name, model) in product(
     results = model.predict(
         source=str(image),
         imgsz=640,
-        device="cpu",
+        device=DEVICE,
         project=str(BASE / "runs/smoke"),
         name=name,
         exist_ok=True,
