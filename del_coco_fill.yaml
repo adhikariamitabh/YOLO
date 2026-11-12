@@ -1,0 +1,21 @@
+python - <<'PY'
+from pathlib import Path
+import yaml
+import ultralytics
+
+root = Path.cwd()
+template = Path(ultralytics.__file__).parent / "cfg/datasets/coco.yaml"
+
+config = yaml.safe_load(template.read_text())
+config["path"] = str(root / "data/coco2017")
+config["train"] = "images/train2017"
+config["val"] = "images/val2017"
+config.pop("test", None)
+config.pop("download", None)
+
+output = root / "coco_full.yaml"
+output.write_text(yaml.safe_dump(config, sort_keys=False))
+
+print(f"Created: {output}")
+print(f"COCO classes: {len(config['names'])}")
+PY
