@@ -1,0 +1,6 @@
+path: /mnt/bst/dgx/atomitak/aadhika2/projects/YOLO/data/lateral_flow/dataset_test38
+train: images/train
+val: images/val
+test: images/test
+names:
+  0: test_window
