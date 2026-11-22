@@ -192,3 +192,25 @@ continues to recognize the NVIDIA GPU.
 
 **Status:** Completed
 
+
+### Entry 004 – November 22, 2026
+**Activity:** YOLO-World pretrained model verification
+
+**Script:** scripts/01_load_yolo_world.py
+**Model:** YOLOv8s-WorldV2
+
+**Verified Results:**
+- PyTorch: 2.7.1+cu126
+- CUDA available: True
+- Model loaded successfully
+- Model task: detect
+- Default classes: 80
+- Weights: models/yolov8s-worldv2.pt
+
+**Observation:**
+The pretrained YOLO-World model loads successfully.
+GPU inference and custom text prompts have not yet
+been tested.
+
+**Status:** Completed
+
