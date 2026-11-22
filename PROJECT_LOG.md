@@ -214,3 +214,37 @@ been tested.
 
 **Status:** Completed
 
+
+### Entry 005 – November 22, 2026
+**Activity:** First YOLO-World GPU inference test
+
+**Script:** scripts/02_gpu_smoke_test.py
+**Model:** YOLOv8s-WorldV2
+**Dataset:** Ultralytics sample image (bus.jpg)
+**GPU:** NVIDIA Tesla V100-SXM2-32GB
+
+**Configuration:**
+- Device: GPU 0
+- Input size: 640
+- Confidence threshold: 0.25
+- Custom prompts: person, bus
+
+**Results:**
+- Persons detected: 4
+- Buses detected: 1
+- Total detections: 5
+- Preprocessing: 92.8 ms
+- Inference: 12.7 ms
+- Postprocessing: 4.3 ms
+
+**Observations:**
+- GPU inference completed successfully.
+- Custom text prompts worked.
+- CLIP dependencies were installed automatically.
+- Model weights and experiment outputs remain on DGX.
+- This is an environment smoke test, not a research baseline.
+
+**Output:** runs/gpu_smoke_test/
+
+**Status:** Completed
+
