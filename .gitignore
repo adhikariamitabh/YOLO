@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env
+
+# Pretrained and trained model weights
+*.pt
+*.pth
+*.onnx
+*.safetensors
+*.engine
+*.ckpt
+
+# Datasets
+data/
+datasets/
+
+# Experiment outputs
+runs/
+results/
+outputs/
+wandb/
+mlruns/
+lightning_logs/
+
+# Temporary files
+*.log
+*.tmp
+.DS_Store
+
+# IDE settings
+.vscode/
+.idea/
