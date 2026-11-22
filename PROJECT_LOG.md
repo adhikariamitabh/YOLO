@@ -376,3 +376,38 @@ Dataset files excluded from GitHub using .gitignore.
 
 **Status:** Not yet executed
 
+
+### Entry 010 – November 22, 2026
+**Activity:** Visual quality control of NWPU VHR-10
+
+**Script:** scripts/07_visualize_nwpu.py
+
+**Completed:**
+- Inspected 5 positive images.
+- Inspected 2 negative images.
+- Verified visible alignment of sampled bounding boxes.
+- Confirmed multiple classes within individual images.
+- Observed different annotation conventions across categories.
+
+**Observations:**
+- Sampled positive bounding boxes appear correctly positioned.
+- Baseball diamond annotations may cover the infield
+  rather than the complete playing field.
+- Some small vehicles appear unannotated.
+- The negative images have no annotation files.
+- One negative image contains possible small vehicles
+  or construction equipment.
+
+**Research Limitation:**
+Negative images are unannotated but may contain
+small instances of target categories. Predictions
+on these images require careful error interpretation.
+
+**Decision:**
+Preserve original annotations.
+Review negative-image detections during error analysis.
+Do not automatically interpret all detections on negative
+images as visually incorrect.
+
+**Status:** Initial visual quality control completed.
+
