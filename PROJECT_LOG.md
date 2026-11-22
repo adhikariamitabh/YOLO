@@ -302,3 +302,77 @@ Additional repetitions are required for reliable benchmarks.
 
 **Status:** Completed
 
+
+---
+
+### Entry 007 – November 22, 2026
+**Activity:** NWPU VHR-10 dataset acquisition
+
+**Script:** scripts/03_download_nwpu.sh
+
+**Dataset:** NWPU VHR-10
+**Source:** https://gcheng-nwpu.github.io/#Datasets
+**Download:** https://data.source.coop/opengeos/geoai/NWPU-VHR-10.zip
+
+**Verified Results:**
+- Archive: data/raw/NWPU-VHR-10.zip
+- Download size: approximately 74 MB
+- Archive integrity check: Passed
+- Ground-truth annotation directory identified
+
+**Observation:**
+Dataset downloaded successfully to the KSU DGX server.
+Original ZIP retained for reproducibility.
+Dataset files excluded from GitHub using .gitignore.
+
+**Status:** Completed
+
+---
+
+### Entry 008 – November 22, 2026
+**Activity:** Dataset extraction and preliminary inspection
+
+**Script:** scripts/04_inspect_nwpu.sh
+
+**Verified Results:**
+- Total images: 800
+- Ground-truth annotation files: 650
+- Expected negative images: 150
+- Dataset extraction: Successful
+
+**Sample Annotation:**
+(208,361),(272,418),1
+(234,429),(289,481),1
+(322,473),(376,540),1
+(313,631),(384,697),1
+
+**Initial Interpretation:**
+- First coordinate pair: bounding-box corner
+- Second coordinate pair: opposite bounding-box corner
+- Final integer: object class ID
+
+**Observations:**
+- Annotations are not in standard YOLO format.
+- Class-ID mapping must be confirmed from dataset documentation.
+- Complete bounding-box validation is pending.
+- The 150 expected negative images still require verification.
+
+**Status:** Preliminary inspection completed
+
+---
+
+### Entry 009 – Pending
+**Activity:** Dataset quality audit
+
+**Script:** scripts/05_analyze_nwpu.py
+
+**Planned Checks:**
+- Verify image and annotation correspondence
+- Count objects per class
+- Validate bounding-box coordinates
+- Identify missing or malformed annotations
+- Verify negative images
+- Confirm all class definitions
+
+**Status:** Not yet executed
+
