@@ -248,3 +248,57 @@ been tested.
 
 **Status:** Completed
 
+
+### Entry 006 – November 22, 2026
+**Activity:** Repeat GPU inference verification
+
+**Script:** scripts/02_gpu_smoke_test.py
+**Model:** YOLOv8s-WorldV2
+**GPU:** Tesla V100-SXM2-32GB
+
+**Second Run Results:**
+- Persons detected: 4
+- Buses detected: 1
+- Total detections: 5
+- Preprocessing: 24.2 ms
+- Inference: 12.3 ms
+- Postprocessing: 1.9 ms
+- Total processing: 38.4 ms
+
+**Dependency Verification:**
+- pip check: No broken requirements found.
+
+**Observation:**
+Detection counts remained consistent across both runs.
+The second run had lower preprocessing latency.
+Additional repetitions are required for reliable benchmarks.
+
+**Status:** Completed
+
+
+### Entry 006 – November 22, 2026
+**Activity:** Repeat GPU inference verification
+
+**Script:** scripts/02_gpu_smoke_test.py
+**Model:** YOLOv8s-WorldV2
+**GPU:** Tesla V100-SXM2-32GB
+
+**Second Run Results:**
+- Persons detected: 4
+- Buses detected: 1
+- Total detections: 5
+- Preprocessing: 24.2 ms
+- Inference: 12.3 ms
+- Postprocessing: 1.9 ms
+- Total processing: 38.4 ms
+
+**Dependency Verification:**
+- pip check: No broken requirements found.
+
+**Observation:**
+Detection counts remained consistent across both runs.
+The second run had lower preprocessing latency.
+Additional repetitions are required for reliable benchmarks.
+
+**Status:** Completed
+
