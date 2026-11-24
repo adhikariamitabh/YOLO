@@ -795,3 +795,72 @@ results/fewshot/e05_validation_metrics.json
 
 **Status:** Completed and validated
 
+
+### Entry 018 – E06 Five-Shot Fine-Tuning and Validation
+
+**Training script:** scripts/18_train_fiveshot.py
+**Validation script:** scripts/19_validate_fiveshot.py
+
+**Model:** YOLOv8s-WorldV2
+**Starting weights:** Original pretrained checkpoint
+**Prompt vocabulary:** E04 hybrid
+**Training images:** 50
+**Training bounding boxes:** 357
+**Validation images:** 120
+**Validation bounding boxes:** 520
+**Epochs:** 50
+**Batch size:** 4
+**Image size:** 640
+**Optimizer:** AdamW
+**Initial learning rate:** 0.0005
+**Seed:** 42
+**GPU:** Tesla V100-SXM2-32GB
+
+**Standardized Validation Results:**
+- Precision: 0.8574
+- Recall: 0.7711
+- mAP50: 0.8406
+- mAP75: 0.6276
+- mAP50-95: 0.5581
+
+**Comparison:**
+- E04 zero-shot mAP50-95: 0.0232
+- E05 one-shot mAP50-95: 0.2631
+- E06 five-shot mAP50-95: 0.5581
+- E05 to E06 improvement: +0.2950
+
+**E06 Per-Class mAP50-95:**
+- Aircraft: 0.5604
+- Ship: 0.6294
+- Storage tank: 0.5635
+- Baseball diamond: 0.6813
+- Tennis court: 0.5314
+- Basketball court: 0.5380
+- Ground track field: 0.8480
+- Harbor: 0.6198
+- Bridge: 0.1013
+- Vehicle: 0.5082
+
+**Findings:**
+- All 50 training epochs completed successfully.
+- Original pretrained checkpoint verified unchanged.
+- best.pt and last.pt saved.
+- Independent validation reproduced training results.
+- Five-shot training substantially outperformed one-shot.
+- Bridge detection remains the weakest category.
+- Test dataset remains untouched.
+
+**Limitations:**
+- Results are based on one training seed.
+- More training images also resulted in more optimizer updates.
+- Held-out test evaluation is still pending.
+- Near-duplicate scene leakage has not been fully ruled out.
+
+**Best checkpoint:**
+runs/fewshot/e06_fiveshot/weights/best.pt
+
+**Validation results:**
+results/fewshot/e06_validation_metrics.json
+
+**Status:** Completed and independently validated.
+

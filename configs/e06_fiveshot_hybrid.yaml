@@ -1,0 +1,16 @@
+path: /mnt/bst/dgx/atomitak/aadhika2/projects/yolo-world/data/processed/nwpu_fewshot/shot_05
+train: images/train
+val: /mnt/bst/dgx/atomitak/aadhika2/projects/yolo-world/data/processed/nwpu_yolo/images/val
+test: /mnt/bst/dgx/atomitak/aadhika2/projects/yolo-world/data/processed/nwpu_yolo/images/test
+nc: 10
+names:
+  0: aircraft
+  1: ship
+  2: storage tank
+  3: baseball diamond
+  4: tennis court
+  5: basketball court
+  6: ground track field
+  7: harbor
+  8: bridge
+  9: vehicle

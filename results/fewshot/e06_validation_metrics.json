@@ -1,0 +1,91 @@
+{
+  "experiment": "E06",
+  "evaluation": "standardized_validation",
+  "timestamp_utc": "2026-11-24T02:03:19.024613+00:00",
+  "model": "YOLOv8s-WorldV2",
+  "checkpoint": "/mnt/bst/dgx/atomitak/aadhika2/projects/yolo-world/runs/fewshot/e06_fiveshot/weights/best.pt",
+  "dataset": "NWPU VHR-10",
+  "split": "val",
+  "training_images": 50,
+  "training_objects": 357,
+  "validation_images": 120,
+  "validation_objects": 520,
+  "image_size": 640,
+  "batch_size": 8,
+  "confidence_threshold": 0.001,
+  "nms_iou_threshold": 0.7,
+  "class_names": [
+    "aircraft",
+    "ship",
+    "storage tank",
+    "baseball diamond",
+    "tennis court",
+    "basketball court",
+    "ground track field",
+    "harbor",
+    "bridge",
+    "vehicle"
+  ],
+  "metrics": {
+    "precision": 0.8573662115134407,
+    "recall": 0.7710705947790826,
+    "map50": 0.8406476873313012,
+    "map75": 0.6276473238458752,
+    "map50_95": 0.5581404732697087
+  },
+  "per_class_map50_95": {
+    "aircraft": 0.5604213766193575,
+    "ship": 0.6293951578727643,
+    "storage tank": 0.5635196010261206,
+    "baseball diamond": 0.6813477040009498,
+    "tennis court": 0.5313945399744414,
+    "basketball court": 0.538024462708038,
+    "ground track field": 0.8479636689291101,
+    "harbor": 0.619836080798193,
+    "bridge": 0.10132783044336571,
+    "vehicle": 0.5081743103247465
+  },
+  "comparison": {
+    "E04": {
+      "precision": 0.6209093090634549,
+      "recall": 0.04297178996730515,
+      "map50": 0.05134213921453821,
+      "map75": 0.01951335432896554,
+      "map50_95": 0.023240777935852507
+    },
+    "E05": {
+      "precision": 0.7022540502514251,
+      "recall": 0.3494176289149096,
+      "map50": 0.4070813725264998,
+      "map75": 0.29866318915398427,
+      "map50_95": 0.2631222293865371
+    },
+    "E06": {
+      "precision": 0.8573662115134407,
+      "recall": 0.7710705947790826,
+      "map50": 0.8406476873313012,
+      "map75": 0.6276473238458752,
+      "map50_95": 0.5581404732697087
+    }
+  },
+  "improvement_vs_e05": {
+    "precision": 0.15511216126201566,
+    "recall": 0.421652965864173,
+    "map50": 0.43356631480480146,
+    "map75": 0.3289841346918909,
+    "map50_95": 0.2950182438831716
+  },
+  "per_class_improvement_vs_e05": {
+    "aircraft": 0.3944301398925571,
+    "ship": 0.10259730425888414,
+    "storage tank": 0.03711045489998499,
+    "baseball diamond": 0.09721028621057703,
+    "tennis court": 0.5080183527478858,
+    "basketball court": 0.516633501581437,
+    "ground track field": 0.24453083384753915,
+    "harbor": 0.6140734373120273,
+    "bridge": 0.10053711773268569,
+    "vehicle": 0.3350410103481378
+  },
+  "test_set_used": false
+}
