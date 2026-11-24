@@ -1,0 +1,100 @@
+{
+  "experiment": "E08",
+  "evaluation": "standardized_validation",
+  "timestamp_utc": "2026-11-24T02:35:04.001970+00:00",
+  "model": "YOLOv8s-WorldV2",
+  "checkpoint": "/mnt/bst/dgx/atomitak/aadhika2/projects/yolo-world/runs/full/e08_full/weights/best.pt",
+  "checkpoint_sha256": "348472deab121e7ea585b8fd4b58818cebb9bbc10378a4e685ef64dfc0b7f6a3",
+  "dataset": "NWPU VHR-10",
+  "split": "val",
+  "training_images": 560,
+  "training_objects": 2848,
+  "validation_images": 120,
+  "validation_objects": 520,
+  "image_size": 640,
+  "batch_size": 8,
+  "confidence_threshold": 0.001,
+  "nms_iou_threshold": 0.7,
+  "class_names": [
+    "aircraft",
+    "ship",
+    "storage tank",
+    "baseball diamond",
+    "tennis court",
+    "basketball court",
+    "ground track field",
+    "harbor",
+    "bridge",
+    "vehicle"
+  ],
+  "metrics": {
+    "precision": 0.9558003580248382,
+    "recall": 0.9112597648672555,
+    "map50": 0.9568181616579912,
+    "map75": 0.8033761920444498,
+    "map50_95": 0.6676461188750428
+  },
+  "per_class_map50_95": {
+    "aircraft": 0.7195270882203273,
+    "ship": 0.6556307452713993,
+    "storage tank": 0.636104677920857,
+    "baseball diamond": 0.7542376370026986,
+    "tennis court": 0.6298899594594255,
+    "basketball court": 0.7520482633891438,
+    "ground track field": 0.8548882026598037,
+    "harbor": 0.6580753018910913,
+    "bridge": 0.3396354853479854,
+    "vehicle": 0.6764238275876956
+  },
+  "comparison": {
+    "E04": {
+      "precision": 0.6209093090634549,
+      "recall": 0.04297178996730515,
+      "map50": 0.05134213921453821,
+      "map75": 0.01951335432896554,
+      "map50_95": 0.023240777935852507
+    },
+    "E05": {
+      "precision": 0.7022540502514251,
+      "recall": 0.3494176289149096,
+      "map50": 0.4070813725264998,
+      "map75": 0.29866318915398427,
+      "map50_95": 0.2631222293865371
+    },
+    "E06": {
+      "precision": 0.8573662115134407,
+      "recall": 0.7710705947790826,
+      "map50": 0.8406476873313012,
+      "map75": 0.6276473238458752,
+      "map50_95": 0.5581404732697087
+    },
+    "E07": {
+      "precision": 0.8445922091289717,
+      "recall": 0.8339278911662584,
+      "map50": 0.8926433773358845,
+      "map75": 0.6729936673399,
+      "map50_95": 0.583588176509102
+    },
+    "E08": {
+      "precision": 0.9558003580248382,
+      "recall": 0.9112597648672555,
+      "map50": 0.9568181616579912,
+      "map75": 0.8033761920444498,
+      "map50_95": 0.6676461188750428
+    }
+  },
+  "per_class_change_vs_e07": {
+    "aircraft": 0.08090426813973983,
+    "ship": 0.011349191006302828,
+    "storage tank": 0.08324814277577819,
+    "baseball diamond": 0.06383261461075262,
+    "tennis court": 0.041891690606358,
+    "basketball court": 0.11108276115294236,
+    "ground track field": 0.06349285048533704,
+    "harbor": 0.09875177874285679,
+    "bridge": 0.18353972624040865,
+    "vehicle": 0.10248639989893038
+  },
+  "validation_run": "/mnt/bst/dgx/atomitak/aadhika2/projects/yolo-world/runs/validation/e08_standardized",
+  "test_set_used": false
+}

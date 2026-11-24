@@ -935,3 +935,72 @@ results/fewshot/e07_validation_metrics.json
 
 **Status:** Completed and independently validated.
 
+
+### Entry 020 – E08 Full-Dataset Fine-Tuning and Validation
+
+**Training script:** scripts/22_train_full.py
+**Validation script:** scripts/23_validate_full.py
+
+**Model:** YOLOv8s-WorldV2
+**Starting weights:** Original pretrained checkpoint
+**Prompt configuration:** E04 hybrid
+**Training images:** 560
+**Positive images:** 455
+**Negative images:** 105
+**Training objects:** 2848
+**Validation images:** 120
+**Validation objects:** 520
+**Epochs:** 50
+**Batch size:** 4
+**Image size:** 640
+**Optimizer:** AdamW
+**Learning rate:** 0.0005
+**Seed:** 42
+
+**Standardized Validation Results:**
+- Precision: 0.9558
+- Recall: 0.9113
+- mAP50: 0.9568
+- mAP75: 0.8034
+- mAP50-95: 0.6676
+
+**Per-Class mAP50-95:**
+- Aircraft: 0.7195
+- Ship: 0.6556
+- Storage tank: 0.6361
+- Baseball diamond: 0.7542
+- Tennis court: 0.6299
+- Basketball court: 0.7520
+- Ground track field: 0.8549
+- Harbor: 0.6581
+- Bridge: 0.3396
+- Vehicle: 0.6764
+
+**E07 Comparison:**
+- E07 mAP50-95: 0.5836
+- E08 mAP50-95: 0.6676
+- Improvement: +0.0840
+- All 10 categories improved.
+
+**Verification:**
+- Completed 50 training epochs.
+- Original pretrained weights unchanged.
+- best.pt and last.pt saved.
+- Independent validation reproduced training results.
+- No test-set evaluation performed.
+
+**Limitations:**
+- Single training seed.
+- Different dataset sizes imply different optimizer updates.
+- E08 includes negative images absent from E05-E07.
+- Some validation categories have very few images.
+- Near-duplicate scene leakage audit pending.
+
+**Checkpoint:**
+runs/full/e08_full/weights/best.pt
+
+**Metrics:**
+results/full/e08_validation_metrics.json
+
+**Status:** Completed and independently validated.
+
