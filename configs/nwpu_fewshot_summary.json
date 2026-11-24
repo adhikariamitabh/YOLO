@@ -1,0 +1,72 @@
+{
+  "seed": 42,
+  "shot_definition": "annotated images per class",
+  "available_images_per_class": {
+    "airplane": 64,
+    "ship": 41,
+    "storage tank": 24,
+    "baseball diamond": 119,
+    "tennis court": 76,
+    "basketball court": 61,
+    "ground track field": 105,
+    "harbor": 17,
+    "bridge": 50,
+    "vehicle": 62
+  },
+  "subsets": {
+    "1": {
+      "status": "created",
+      "images": 10,
+      "bounding_boxes": 50,
+      "objects_per_class": {
+        "airplane": 4,
+        "ship": 7,
+        "storage tank": 14,
+        "baseball diamond": 11,
+        "tennis court": 4,
+        "basketball court": 1,
+        "ground track field": 2,
+        "harbor": 3,
+        "bridge": 1,
+        "vehicle": 3
+      },
+      "data_yaml": "/mnt/bst/dgx/atomitak/aadhika2/projects/yolo-world/data/processed/nwpu_fewshot/shot_01/data.yaml"
+    },
+    "5": {
+      "status": "created",
+      "images": 50,
+      "bounding_boxes": 357,
+      "objects_per_class": {
+        "airplane": 42,
+        "ship": 52,
+        "storage tank": 107,
+        "baseball diamond": 26,
+        "tennis court": 45,
+        "basketball court": 15,
+        "ground track field": 9,
+        "harbor": 34,
+        "bridge": 7,
+        "vehicle": 20
+      },
+      "data_yaml": "/mnt/bst/dgx/atomitak/aadhika2/projects/yolo-world/data/processed/nwpu_fewshot/shot_05/data.yaml"
+    },
+    "10": {
+      "status": "created",
+      "images": 95,
+      "bounding_boxes": 750,
+      "objects_per_class": {
+        "airplane": 86,
+        "ship": 82,
+        "storage tank": 244,
+        "baseball diamond": 44,
+        "tennis court": 99,
+        "basketball court": 30,
+        "ground track field": 17,
+        "harbor": 95,
+        "bridge": 15,
+        "vehicle": 38
+      },
+      "data_yaml": "/mnt/bst/dgx/atomitak/aadhika2/projects/yolo-world/data/processed/nwpu_fewshot/shot_10/data.yaml"
+    }
+  }
+}

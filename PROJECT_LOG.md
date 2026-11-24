@@ -728,3 +728,70 @@ Proceed to limited-data model adaptation.
 
 **Status:** Completed
 
+
+### Entry 017 – November 23, 2026
+**Experiment:** E05 – One-Shot Fine-Tuning
+
+**Training script:** scripts/16_train_oneshot.py
+**Validation script:** scripts/17_validate_oneshot.py
+
+**Model:** YOLOv8s-WorldV2
+**Initial weights:** Original pretrained checkpoint
+**Prompt configuration:** E04 hybrid
+**GPU:** Tesla V100-SXM2-32GB
+
+**Training configuration:**
+- Training images: 10
+- Training bounding boxes: 50
+- Validation images: 120
+- Validation bounding boxes: 520
+- Epochs: 50
+- Batch size: 4
+- Image size: 640
+- Optimizer: AdamW
+- Initial learning rate: 0.0005
+- Seed: 42
+
+**Standardized Validation Results:**
+- Precision: 0.7023
+- Recall: 0.3494
+- mAP50: 0.4071
+- mAP75: 0.2987
+- mAP50-95: 0.2631
+
+**Comparison with E04:**
+- E04 mAP50: 0.0513
+- E05 mAP50: 0.4071
+- E04 mAP50-95: 0.0232
+- E05 mAP50-95: 0.2631
+
+**Per-Class E05 mAP50-95:**
+- Aircraft: 0.1660
+- Ship: 0.5268
+- Storage tank: 0.5264
+- Baseball diamond: 0.5841
+- Tennis court: 0.0234
+- Basketball court: 0.0214
+- Ground track field: 0.6034
+- Harbor: 0.0058
+- Bridge: 0.0008
+- Vehicle: 0.1731
+
+**Findings:**
+- Training completed all 50 epochs.
+- Both best.pt and last.pt were saved.
+- Independent validation reproduced training results.
+- Fine-tuning substantially improved detection.
+- Ground track field and baseball diamond performed well.
+- Bridge, harbor, and basketball court remained difficult.
+- Test set was not used.
+- Results require confirmation across seeds and held-out test data.
+
+**Checkpoint:**
+runs/fewshot/e05_oneshot/weights/best.pt
+
+**Metrics:**
+results/fewshot/e05_validation_metrics.json
+
+**Status:** Completed and validated
+

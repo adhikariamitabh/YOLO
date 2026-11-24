@@ -1,0 +1,21 @@
+{
+  "experiment": "E05",
+  "description": "Image-based one-shot fine-tuning",
+  "timestamp_utc": "2026-11-24T01:46:40.999928+00:00",
+  "model": "yolov8s-worldv2.pt",
+  "training_images": 10,
+  "training_objects": 50,
+  "validation_images": 120,
+  "epochs": 50,
+  "batch": 4,
+  "image_size": 640,
+  "optimizer": "AdamW",
+  "learning_rate": 0.0005,
+  "seed": 42,
+  "prompt_configuration": "E04 hybrid",
+  "training_yaml": "/mnt/bst/dgx/atomitak/aadhika2/projects/yolo-world/configs/e05_oneshot_hybrid.yaml",
+  "run_directory": "/mnt/bst/dgx/atomitak/aadhika2/projects/yolo-world/runs/fewshot/e05_oneshot",
+  "best_weights": "/mnt/bst/dgx/atomitak/aadhika2/projects/yolo-world/runs/fewshot/e05_oneshot/weights/best.pt",
+  "last_weights": "/mnt/bst/dgx/atomitak/aadhika2/projects/yolo-world/runs/fewshot/e05_oneshot/weights/last.pt",
+  "test_set_used": false
+}
