@@ -620,3 +620,60 @@ Further testing and visual error analysis are needed.
 - runs/e02_domain_aware/
 
 **Status:** Completed
+
+### Entry 015 – November 23, 2026
+**Experiment:** E03 – Synonym and Object-Specific Prompting
+
+**Script:** scripts/13_synonym_prompts.py
+**Model:** YOLOv8s-WorldV2
+**Dataset:** NWPU VHR-10
+**Split:** Validation
+**Images:** 120
+**Ground-truth objects:** 520
+**Training:** None
+
+**Prompts:**
+- aircraft
+- vessel
+- industrial storage tank
+- baseball infield
+- tennis court
+- basketball court
+- running track
+- port
+- bridge
+- motor vehicle
+
+**E03 Results:**
+- Precision: 0.7445
+- Recall: 0.0257
+- mAP50: 0.0336
+- mAP75: 0.0136
+- mAP50-95: 0.0155
+
+**Comparison (mAP50-95):**
+- E01 simple prompts: 0.0217
+- E02 aerial prompts: 0.0080
+- E03 alternative prompts: 0.0155
+
+**Important Observations:**
+- E01 remains the best overall configuration.
+- Aircraft improved over airplane for the tested setups.
+- Vessel performed worse than ship.
+- Motor vehicle performed worse than vehicle.
+- Overall recall remains very low.
+- No model weights were updated.
+
+**Research Limitation:**
+Multiple prompts changed simultaneously in E03.
+Per-class changes cannot be attributed exclusively
+to individual prompt terms without controlled tests.
+
+**Outputs:**
+- configs/e03_synonym_prompts.yaml
+- results/zero_shot/e03_synonym_metrics.json
+- results/zero_shot/e01_e02_e03_comparison.json
+- runs/e03_synonym_prompts/
+
+**Status:** Completed
+
