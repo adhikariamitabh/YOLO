@@ -411,3 +411,27 @@ images as visually incorrect.
 
 **Status:** Initial visual quality control completed.
 
+
+### Dataset Audit Correction – November 23, 2026
+
+**Script:** scripts/05_analyze_nwpu.py
+
+**Issue:** The initial audit used image filename stems
+as dictionary keys. Positive and negative image folders
+contained 150 duplicate filename stems.
+
+**Initial result:** 210 bounding-box errors.
+
+**Correction:** Match ground-truth annotations only
+against images in positive_image_set.
+
+**Verified results:**
+- Positive images: 650
+- Negative images: 150
+- Total images: 800
+- Annotation files: 650
+- Bounding boxes: 3,896
+- Coordinate validation errors: 0
+
+**Status:** Resolved.
+
