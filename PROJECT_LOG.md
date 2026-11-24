@@ -435,3 +435,55 @@ against images in positive_image_set.
 
 **Status:** Resolved.
 
+
+### Entry 011 – November 23, 2026
+**Activity:** Reproducible dataset splitting
+
+**Script:** scripts/08_split_nwpu.py
+**Dataset:** NWPU VHR-10
+**Random Seed:** 42
+**Split:** 70% train / 15% validation / 15% test
+
+**Results:**
+
+Training:
+- Total images: 560
+- Positive: 455
+- Negative: 105
+- Annotated objects: 2848
+
+Validation:
+- Total images: 120
+- Positive: 98
+- Negative: 22
+- Annotated objects: 520
+
+Testing:
+- Total images: 120
+- Positive: 97
+- Negative: 23
+- Annotated objects: 528
+
+**Verification:**
+- All 10 classes present in every split: PASS
+- No image assigned to multiple splits: PASS
+- Exact duplicate image check: PASS
+- All 3896 annotated objects accounted for: PASS
+- Random seed reproducibility: 42
+
+**Files Created:**
+- configs/nwpu_split_manifest.csv
+- configs/nwpu_split_summary.json
+
+**Research Decision:**
+Use the same fixed partitions for all experiments.
+Use validation data for prompt selection and tuning.
+Reserve the test set for final model evaluation.
+Original images and annotations remain unchanged.
+
+**Limitation:**
+Potential spatial overlap between aerial images
+has not yet been evaluated.
+
+**Status:** Completed
+
