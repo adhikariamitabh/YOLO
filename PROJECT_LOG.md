@@ -864,3 +864,74 @@ results/fewshot/e06_validation_metrics.json
 
 **Status:** Completed and independently validated.
 
+
+### Entry 019 – E07 Ten-Shot Fine-Tuning and Validation
+
+**Training script:** scripts/20_train_tenshot.py
+**Validation script:** scripts/21_validate_tenshot.py
+
+**Model:** YOLOv8s-WorldV2
+**Initial weights:** Original pretrained checkpoint
+**Prompt configuration:** E04 hybrid
+**Training images:** 95
+**Training bounding boxes:** 750
+**Validation images:** 120
+**Validation bounding boxes:** 520
+**Epochs:** 50
+**Batch size:** 4
+**Image size:** 640
+**Optimizer:** AdamW
+**Initial learning rate:** 0.0005
+**Seed:** 42
+
+**Standardized Validation Results:**
+- Precision: 0.8446
+- Recall: 0.8339
+- mAP50: 0.8926
+- mAP75: 0.6730
+- mAP50-95: 0.5836
+
+**Per-Class mAP50-95:**
+- Aircraft: 0.6386
+- Ship: 0.6443
+- Storage tank: 0.5529
+- Baseball diamond: 0.6904
+- Tennis court: 0.5880
+- Basketball court: 0.6410
+- Ground track field: 0.7914
+- Harbor: 0.5593
+- Bridge: 0.1561
+- Vehicle: 0.5739
+
+**Comparison with E06:**
+- E06 mAP50-95: 0.5581
+- E07 mAP50-95: 0.5836
+- Improvement: +0.0255
+- E06 recall: 0.7711
+- E07 recall: 0.8339
+
+**Findings:**
+- Training completed all 50 epochs.
+- best.pt and last.pt saved.
+- Original pretrained checkpoint remained unchanged.
+- Independent validation reproduced training results.
+- E07 achieved the highest overall validation mAP so far.
+- Seven classes improved compared with E06.
+- Bridge remains the most difficult category.
+- Gains from E06 to E07 were smaller than from E05 to E06.
+
+**Limitations:**
+- Results based on one seed.
+- Fixed epochs imply different numbers of optimizer updates.
+- Some classes have few validation images.
+- Near-duplicate scene leakage has not been fully assessed.
+- Final held-out test evaluation remains pending.
+
+**Checkpoint:**
+runs/fewshot/e07_tenshot/weights/best.pt
+
+**Metrics:**
+results/fewshot/e07_validation_metrics.json
+
+**Status:** Completed and independently validated.
+
