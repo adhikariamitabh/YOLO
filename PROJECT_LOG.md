@@ -518,3 +518,57 @@ Keep the test partition reserved for final evaluation.
 
 **Status:** Completed
 
+
+### Entry 013 – November 23, 2026
+**Experiment:** E01 – Zero-Shot Baseline
+
+**Script:** scripts/11_zero_shot_baseline.py
+**Model:** YOLOv8s-WorldV2
+**Dataset:** NWPU VHR-10
+**Split:** Validation
+**Images:** 120
+**Ground-truth objects:** 520
+**GPU:** Tesla V100-SXM2-32GB
+
+**Configuration:**
+- Image size: 640
+- Batch size: 8
+- Confidence threshold: 0.001
+- NMS IoU threshold: 0.70
+- Classes: 10
+- Training: None
+- Model weights: Unchanged
+
+**Evaluation Results:**
+- Precision: 0.6066
+- Recall: 0.0331
+- mAP@0.50: 0.0471
+- mAP@0.75: 0.0181
+- mAP@0.50:0.95: 0.0217
+
+**Per-Class mAP@0.50:0.95:**
+- Airplane: 0.1282
+- Ship: 0.0153
+- Storage tank: 0.0000
+- Baseball diamond: 0.0000
+- Tennis court: 0.0000
+- Basketball court: 0.0000
+- Ground track field: 0.0000
+- Harbor: 0.0000
+- Bridge: 0.0000
+- Vehicle: 0.0738
+
+**Observations:**
+- First formal zero-shot baseline completed.
+- Recall is very low.
+- Airplane achieved the highest class mAP.
+- Vehicle and ship achieved nonzero mAP.
+- Seven categories achieved zero mAP.
+- No target-domain fine-tuning was performed.
+- Predictions require visual error analysis.
+
+**Outputs:**
+- results/zero_shot/e01_baseline_metrics.json
+- runs/e01_zero_shot_baseline/
+
+**Status:** Completed
