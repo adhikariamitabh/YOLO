@@ -1,0 +1,186 @@
+{
+  "project": "Adapting YOLO-World for Remote-Sensing Object Detection",
+  "timestamp_utc": "2026-11-24T02:43:05.686233+00:00",
+  "dataset": "NWPU VHR-10",
+  "split": "test",
+  "test_images": 120,
+  "test_objects": 528,
+  "evaluation": {
+    "split": "test",
+    "device": 0,
+    "imgsz": 640,
+    "batch": 8,
+    "workers": 2,
+    "conf": 0.001,
+    "iou": 0.7,
+    "max_det": 300
+  },
+  "classes": [
+    "aircraft",
+    "ship",
+    "storage tank",
+    "baseball diamond",
+    "tennis court",
+    "basketball court",
+    "ground track field",
+    "harbor",
+    "bridge",
+    "vehicle"
+  ],
+  "dataset_similarity_audit": {
+    "potential_train_test_pairs": 2,
+    "confirmed_duplicates": null,
+    "visual_review_completed": false,
+    "test_images_excluded": 0,
+    "note": "Two train-test image pairs were flagged by perceptual hashing but not visually adjudicated. Results are reported on the complete original test partition with this limitation disclosed."
+  },
+  "experiments": {
+    "E04": {
+      "experiment": "E04",
+      "description": "Zero-shot hybrid",
+      "checkpoint": "/mnt/bst/dgx/atomitak/aadhika2/projects/yolo-world/models/yolov8s-worldv2.pt",
+      "dataset_yaml": "/mnt/bst/dgx/atomitak/aadhika2/projects/yolo-world/configs/e04_hybrid_prompts.yaml",
+      "training_images": 0,
+      "test_images": 120,
+      "test_objects": 528,
+      "metrics": {
+        "precision": 0.6673760475706269,
+        "recall": 0.05030487112685905,
+        "map50": 0.0658348508470232,
+        "map75": 0.03779738768715378,
+        "map50_95": 0.03812791561681733
+      },
+      "per_class_map50_95": {
+        "aircraft": 0.31531730535254976,
+        "ship": 0.014354114496582127,
+        "storage tank": 2.727770557339888e-05,
+        "baseball diamond": 0.0,
+        "tennis court": 0.0,
+        "basketball court": 0.0,
+        "ground track field": 0.0,
+        "harbor": 0.0002768817204301075,
+        "bridge": 0.0,
+        "vehicle": 0.051303576893037973
+      },
+      "run_directory": "/mnt/bst/dgx/atomitak/aadhika2/projects/yolo-world/runs/final_test/e04"
+    },
+    "E05": {
+      "experiment": "E05",
+      "description": "One-shot",
+      "checkpoint": "/mnt/bst/dgx/atomitak/aadhika2/projects/yolo-world/runs/fewshot/e05_oneshot/weights/best.pt",
+      "dataset_yaml": "/mnt/bst/dgx/atomitak/aadhika2/projects/yolo-world/configs/e05_oneshot_hybrid.yaml",
+      "training_images": 10,
+      "test_images": 120,
+      "test_objects": 528,
+      "metrics": {
+        "precision": 0.6385965189197698,
+        "recall": 0.3664284849479521,
+        "map50": 0.3724433647333355,
+        "map75": 0.2488573692405101,
+        "map50_95": 0.22474839518175546
+      },
+      "per_class_map50_95": {
+        "aircraft": 0.3118874593996749,
+        "ship": 0.49848588467992466,
+        "storage tank": 0.1716934891589021,
+        "baseball diamond": 0.5426086559462924,
+        "tennis court": 0.03380997343994564,
+        "basketball court": 0.0013136053683027323,
+        "ground track field": 0.5168520090438783,
+        "harbor": 0.08862147005051842,
+        "bridge": 0.002699770817417876,
+        "vehicle": 0.07951163391269736
+      },
+      "run_directory": "/mnt/bst/dgx/atomitak/aadhika2/projects/yolo-world/runs/final_test/e05"
+    },
+    "E06": {
+      "experiment": "E06",
+      "description": "Five-shot",
+      "checkpoint": "/mnt/bst/dgx/atomitak/aadhika2/projects/yolo-world/runs/fewshot/e06_fiveshot/weights/best.pt",
+      "dataset_yaml": "/mnt/bst/dgx/atomitak/aadhika2/projects/yolo-world/configs/e06_fiveshot_hybrid.yaml",
+      "training_images": 50,
+      "test_images": 120,
+      "test_objects": 528,
+      "metrics": {
+        "precision": 0.7782855292178249,
+        "recall": 0.7326223658216252,
+        "map50": 0.7744466068522509,
+        "map75": 0.521796132370165,
+        "map50_95": 0.4903323739722535
+      },
+      "per_class_map50_95": {
+        "aircraft": 0.6182575343983425,
+        "ship": 0.5819974575855003,
+        "storage tank": 0.316993751983039,
+        "baseball diamond": 0.7287558159706629,
+        "tennis court": 0.5187968597510475,
+        "basketball court": 0.40556602876383707,
+        "ground track field": 0.7975987401487401,
+        "harbor": 0.5079969989823898,
+        "bridge": 0.0541819437588736,
+        "vehicle": 0.37317860838010175
+      },
+      "run_directory": "/mnt/bst/dgx/atomitak/aadhika2/projects/yolo-world/runs/final_test/e06"
+    },
+    "E07": {
+      "experiment": "E07",
+      "description": "Ten-shot",
+      "checkpoint": "/mnt/bst/dgx/atomitak/aadhika2/projects/yolo-world/runs/fewshot/e07_tenshot/weights/best.pt",
+      "dataset_yaml": "/mnt/bst/dgx/atomitak/aadhika2/projects/yolo-world/configs/e07_tenshot_hybrid.yaml",
+      "training_images": 95,
+      "test_images": 120,
+      "test_objects": 528,
+      "metrics": {
+        "precision": 0.8145771514765107,
+        "recall": 0.7254891680537436,
+        "map50": 0.7881107328015395,
+        "map75": 0.5917754855716918,
+        "map50_95": 0.5128973309899323
+      },
+      "per_class_map50_95": {
+        "aircraft": 0.6651618366875774,
+        "ship": 0.5784220927995062,
+        "storage tank": 0.24382081319520105,
+        "baseball diamond": 0.719435146080462,
+        "tennis court": 0.5629592449157895,
+        "basketball court": 0.5493134661145948,
+        "ground track field": 0.8036277325547643,
+        "harbor": 0.406673689821177,
+        "bridge": 0.11767128013705949,
+        "vehicle": 0.48188800759319106
+      },
+      "run_directory": "/mnt/bst/dgx/atomitak/aadhika2/projects/yolo-world/runs/final_test/e07"
+    },
+    "E08": {
+      "experiment": "E08",
+      "description": "Full dataset",
+      "checkpoint": "/mnt/bst/dgx/atomitak/aadhika2/projects/yolo-world/runs/full/e08_full/weights/best.pt",
+      "dataset_yaml": "/mnt/bst/dgx/atomitak/aadhika2/projects/yolo-world/configs/e08_full_hybrid.yaml",
+      "training_images": 560,
+      "test_images": 120,
+      "test_objects": 528,
+      "metrics": {
+        "precision": 0.9400964097858189,
+        "recall": 0.8854694855112651,
+        "map50": 0.9251369167075865,
+        "map75": 0.7250870555276314,
+        "map50_95": 0.6260220520381202
+      },
+      "per_class_map50_95": {
+        "aircraft": 0.7143824970543179,
+        "ship": 0.5835995692187301,
+        "storage tank": 0.26859616951762716,
+        "baseball diamond": 0.7802695167431961,
+        "tennis court": 0.6758597503084061,
+        "basketball court": 0.6946335606060606,
+        "ground track field": 0.8454627168657115,
+        "harbor": 0.5167440437081356,
+        "bridge": 0.480825,
+        "vehicle": 0.6998476963590173
+      },
+      "run_directory": "/mnt/bst/dgx/atomitak/aadhika2/projects/yolo-world/runs/final_test/e08"
+    }
+  },
+  "no_training_performed": true,
+  "no_checkpoint_selection_using_test": true
+}

@@ -1004,3 +1004,73 @@ results/full/e08_validation_metrics.json
 
 **Status:** Completed and independently validated.
 
+
+## Final Evaluation and Research Results
+
+### Completed Experiments
+
+E01-E04: Zero-shot prompting experiments
+E05: One-shot image-based fine-tuning
+E06: Five-shot image-based fine-tuning
+E07: Ten-shot image-based fine-tuning
+E08: Full-dataset fine-tuning
+
+### Held-Out Test Results
+
+Dataset: NWPU VHR-10
+Test images: 120
+Annotated objects: 528
+GPU: Tesla V100-SXM2-32GB
+
+| Experiment | Training Images | Test mAP50-95 |
+|---|---:|---:|
+| E04 | 0 | 0.0381 |
+| E05 | 10 | 0.2247 |
+| E06 | 50 | 0.4903 |
+| E07 | 95 | 0.5129 |
+| E08 | 560 | 0.6260 |
+
+Best model: E08
+Precision: 0.9401
+Recall: 0.8855
+mAP50: 0.9251
+mAP75: 0.7251
+mAP50-95: 0.6260
+
+### Error Analysis
+
+Diagnostic confidence threshold: 0.25
+Matching IoU threshold: 0.50
+
+Matched predictions: 487
+Unmatched predictions: 58
+Missed objects: 41
+
+Storage tanks had the largest number of errors.
+
+### Data Integrity
+
+No exact cross-split duplicate files were found.
+Two potential train-test similarity pairs were flagged
+but not visually adjudicated.
+All original test images were retained.
+
+### Research Outputs
+
+Final test comparison: Complete
+Per-class analysis: Complete
+Detection error analysis: Complete
+Figures 1-4: Complete
+Qualitative image review: Complete
+Results and Discussion draft: Complete
+
+### Reproducibility
+
+All fine-tuning experiments used the original
+pretrained checkpoint as their starting point.
+
+No retraining or checkpoint changes were performed
+after the held-out test evaluation.
+
+Model checkpoints and datasets remain on DGX.
+

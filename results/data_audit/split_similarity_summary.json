@@ -1,0 +1,38 @@
+{
+  "dataset": "NWPU VHR-10",
+  "images_per_split": {
+    "train": 560,
+    "val": 120,
+    "test": 120
+  },
+  "total_images": 800,
+  "methods": [
+    "SHA256",
+    "decoded_pixel_SHA256",
+    "pHash",
+    "dHash"
+  ],
+  "phash_threshold": 10,
+  "dhash_threshold": 8,
+  "cross_split_comparisons": {
+    "train_vs_val": 67200,
+    "train_vs_test": 67200,
+    "val_vs_test": 14400
+  },
+  "candidate_pairs_by_split": {
+    "train_vs_test": 2
+  },
+  "total_candidate_pairs": 2,
+  "exact_file_pairs": 0,
+  "exact_pixel_pairs": 0,
+  "risk_counts": {
+    "HIGH_SIMILARITY": 1,
+    "REVIEW": 1
+  },
+  "candidate_csv": "/mnt/bst/dgx/atomitak/aadhika2/projects/yolo-world/results/data_audit/cross_split_similarity_candidates.csv",
+  "preview": "/mnt/bst/dgx/atomitak/aadhika2/projects/yolo-world/results/data_audit/cross_split_top24.jpg",
+  "test_labels_used": false,
+  "test_metrics_calculated": false,
+  "dataset_modified": false,
+  "note": "Perceptual hash matches are candidates, not confirmed duplicates. Hashing may miss cropped, rotated or differently framed scenes."
+}

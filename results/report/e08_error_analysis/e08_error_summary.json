@@ -1,0 +1,102 @@
+{
+  "experiment": "E08",
+  "split": "test",
+  "images": 120,
+  "diagnostic_confidence": 0.25,
+  "matching_iou": 0.5,
+  "counts": {
+    "tp": 487,
+    "fp": 58,
+    "fn": 41
+  },
+  "classes": [
+    {
+      "class": "aircraft",
+      "gt": 97,
+      "tp": 97,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "class": "ship",
+      "gt": 34,
+      "tp": 30,
+      "fp": 8,
+      "fn": 4
+    },
+    {
+      "class": "storage tank",
+      "gt": 94,
+      "tp": 75,
+      "fp": 22,
+      "fn": 19
+    },
+    {
+      "class": "baseball diamond",
+      "gt": 52,
+      "tp": 51,
+      "fp": 8,
+      "fn": 1
+    },
+    {
+      "class": "tennis court",
+      "gt": 96,
+      "tp": 88,
+      "fp": 5,
+      "fn": 8
+    },
+    {
+      "class": "basketball court",
+      "gt": 19,
+      "tp": 17,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "class": "ground track field",
+      "gt": 29,
+      "tp": 29,
+      "fp": 0,
+      "fn": 0
+    },
+    {
+      "class": "harbor",
+      "gt": 45,
+      "tp": 42,
+      "fp": 11,
+      "fn": 3
+    },
+    {
+      "class": "bridge",
+      "gt": 13,
+      "tp": 11,
+      "fp": 0,
+      "fn": 2
+    },
+    {
+      "class": "vehicle",
+      "gt": 49,
+      "tp": 47,
+      "fp": 4,
+      "fn": 2
+    }
+  ],
+  "gallery_images": [
+    "positive_285.jpg",
+    "positive_323.jpg",
+    "positive_324.jpg",
+    "positive_081.jpg",
+    "positive_604.jpg",
+    "positive_282.jpg",
+    "positive_430.jpg",
+    "positive_275.jpg",
+    "positive_277.jpg",
+    "positive_518.jpg",
+    "positive_226.jpg",
+    "positive_333.jpg"
+  ],
+  "official_map_replaced": false,
+  "training_performed": false,
+  "model_selection_performed": false,
+  "notes": "Diagnostic counts at a fixed confidence threshold. They are not official AP metrics. Unannotated objects may be counted as false positives. Two train-test similarity candidates remain unresolved."
+}

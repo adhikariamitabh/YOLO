@@ -1,0 +1,3 @@
+group,split_a,image_a,split_b,image_b,phash_distance,dhash_distance,exact_file,exact_pixels,risk
+train_vs_test,train,data/processed/nwpu_yolo/images/train/positive_288.jpg,test,data/processed/nwpu_yolo/images/test/positive_297.jpg,2,1,False,False,HIGH_SIMILARITY
+train_vs_test,train,data/processed/nwpu_yolo/images/train/positive_477.jpg,test,data/processed/nwpu_yolo/images/test/positive_617.jpg,8,10,False,False,REVIEW

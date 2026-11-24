@@ -1,0 +1,29 @@
+{
+  "experiment": "E05",
+  "description": "One-shot",
+  "checkpoint": "/mnt/bst/dgx/atomitak/aadhika2/projects/yolo-world/runs/fewshot/e05_oneshot/weights/best.pt",
+  "dataset_yaml": "/mnt/bst/dgx/atomitak/aadhika2/projects/yolo-world/configs/e05_oneshot_hybrid.yaml",
+  "training_images": 10,
+  "test_images": 120,
+  "test_objects": 528,
+  "metrics": {
+    "precision": 0.6385965189197698,
+    "recall": 0.3664284849479521,
+    "map50": 0.3724433647333355,
+    "map75": 0.2488573692405101,
+    "map50_95": 0.22474839518175546
+  },
+  "per_class_map50_95": {
+    "aircraft": 0.3118874593996749,
+    "ship": 0.49848588467992466,
+    "storage tank": 0.1716934891589021,
+    "baseball diamond": 0.5426086559462924,
+    "tennis court": 0.03380997343994564,
+    "basketball court": 0.0013136053683027323,
+    "ground track field": 0.5168520090438783,
+    "harbor": 0.08862147005051842,
+    "bridge": 0.002699770817417876,
+    "vehicle": 0.07951163391269736
+  },
+  "run_directory": "/mnt/bst/dgx/atomitak/aadhika2/projects/yolo-world/runs/final_test/e05"
+}

@@ -1,0 +1,11 @@
+class,gt,tp,fp,fn
+aircraft,97,97,0,0
+ship,34,30,8,4
+storage tank,94,75,22,19
+baseball diamond,52,51,8,1
+tennis court,96,88,5,8
+basketball court,19,17,0,2
+ground track field,29,29,0,0
+harbor,45,42,11,3
+bridge,13,11,0,2
+vehicle,49,47,4,2
