@@ -677,3 +677,54 @@ to individual prompt terms without controlled tests.
 
 **Status:** Completed
 
+
+### Entry 016 – November 23, 2026
+**Experiment:** E04 – Hybrid Zero-Shot Prompting
+
+**Script:** scripts/14_hybrid_prompts.py
+**Model:** YOLOv8s-WorldV2
+**Dataset:** NWPU VHR-10
+**Split:** Validation
+**Images:** 120
+**Ground-truth objects:** 520
+**Training:** None
+
+**Prompt Configuration:**
+- Changed airplane to aircraft
+- Retained the other nine original class names
+
+**E04 Results:**
+- Precision: 0.6209
+- Recall: 0.0430
+- mAP50: 0.0513
+- mAP75: 0.0195
+- mAP50-95: 0.0232
+
+**Per-Class mAP50-95:**
+- Airplane: 0.1447
+- Ship: 0.0134
+- Vehicle: 0.0742
+- Other seven categories: 0.0000
+
+**Comparison:**
+- E01 mAP50-95: 0.0217
+- E02 mAP50-95: 0.0080
+- E03 mAP50-95: 0.0155
+- E04 mAP50-95: 0.0232
+
+**Research Findings:**
+- E04 achieved the highest overall validation mAP.
+- Replacing airplane with aircraft improved
+  airplane detection compared with E01.
+- Recall improved relative to E01.
+- Seven categories still had zero mAP50-95.
+- No model weights were updated.
+
+**Decision:**
+Retain E04 as the strongest observed zero-shot
+validation configuration.
+Keep the test partition untouched.
+Proceed to limited-data model adaptation.
+
+**Status:** Completed
+
