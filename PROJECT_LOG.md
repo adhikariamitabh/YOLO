@@ -487,3 +487,34 @@ has not yet been evaluated.
 
 **Status:** Completed
 
+
+### Entry 012 – November 23, 2026
+**Activity:** NWPU VHR-10 annotation conversion and validation
+
+**Scripts:**
+- scripts/09_convert_nwpu_to_yolo.py
+- scripts/10_validate_yolo_conversion.py
+
+**Results:**
+- Training: 560 images, 2848 objects
+- Validation: 120 images, 520 objects
+- Testing: 120 images, 528 objects
+- Total: 800 images, 3896 objects
+
+**Validation:**
+- Image verification: PASS
+- Bounding-box verification: PASS
+- Class ID conversion: PASS
+- Coordinate normalization: PASS
+- Detected conversion errors: 0
+
+**Dataset Configuration:**
+data/processed/nwpu_yolo/data.yaml
+
+**Research Decision:**
+Use the converted dataset for zero-shot evaluation,
+few-shot adaptation, and full fine-tuning.
+Keep the test partition reserved for final evaluation.
+
+**Status:** Completed
+
