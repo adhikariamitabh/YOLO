@@ -1,0 +1,16 @@
+path: /mnt/bst/dgx/atomitak/aadhika2/projects/yolo-world/data/processed/nwpu_yolo
+train: images/train
+val: images/val
+test: images/test
+nc: 10
+names:
+  0: airplane viewed from above
+  1: ship viewed from above
+  2: storage tank viewed from above
+  3: baseball diamond viewed from above
+  4: tennis court viewed from above
+  5: basketball court viewed from above
+  6: ground track field viewed from above
+  7: harbor viewed from above
+  8: bridge viewed from above
+  9: vehicle viewed from above

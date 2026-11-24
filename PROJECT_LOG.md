@@ -572,3 +572,51 @@ Keep the test partition reserved for final evaluation.
 - runs/e01_zero_shot_baseline/
 
 **Status:** Completed
+
+### Entry 014 – November 23, 2026
+**Experiment:** E02 – Domain-Aware Zero-Shot Prompting
+
+**Script:** scripts/12_domain_aware_prompts.py
+**Model:** YOLOv8s-WorldV2
+**Dataset:** NWPU VHR-10
+**Split:** Validation
+**Images:** 120
+**Objects:** 520
+
+**Experiment Design:**
+Compared simple class-name prompts with descriptions
+containing "viewed from above".
+
+**E01 Baseline:**
+- Precision: 0.6066
+- Recall: 0.0331
+- mAP50: 0.0471
+- mAP50-95: 0.0217
+
+**E02 Results:**
+- Precision: 0.5328
+- Recall: 0.0239
+- mAP50: 0.0208
+- mAP50-95: 0.0080
+
+**Key Findings:**
+- Domain-aware prompts reduced overall performance.
+- mAP50 decreased by approximately 56%.
+- Airplane performance decreased.
+- Vehicle performance decreased substantially.
+- Ground track field showed a small improvement.
+- Seven classes had near-zero or zero performance.
+- No model weights were updated.
+
+**Interpretation:**
+Adding aerial-view language did not improve
+zero-shot performance in this experiment.
+Prompt effectiveness appears category-dependent.
+Further testing and visual error analysis are needed.
+
+**Outputs:**
+- configs/e02_domain_prompts.yaml
+- results/zero_shot/e02_domain_metrics.json
+- runs/e02_domain_aware/
+
+**Status:** Completed
